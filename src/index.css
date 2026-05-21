@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gold: #C9A84C;
+    --bronze: #8B6914;
+    --charcoal: #1A1A2E;
+    --cream: #F8F5F0;
+    --darktext: #2D2D2D;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-darktext font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gold to-bronze;
+  }
+  
+  .bg-gradient-gold {
+    @apply bg-gradient-to-r from-gold to-bronze;
+  }
+
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-2;
+  }
+
+  .glass-panel {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+}
+
+/* Custom Utilities that might not map exactly to Tailwind easily */
+.hero-gradient-overlay {
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(201, 168, 76, 0.4) 100%);
+}
+
+.floating-grid {
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.hexagon-clip {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: var(--gold);
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .timeline-line::before {
+    left: 20px;
+    transform: none;
+  }
+}
+
+.floating-label-input {
+  @apply relative;
+}
+
+.floating-label-input input,
+.floating-label-input textarea,
+.floating-label-input select {
+  @apply w-full border-b-2 border-gray-300 bg-transparent px-0 py-3 text-darktext focus:border-gold focus:outline-none focus:ring-0 transition-colors;
+}
+
+.floating-label-input label {
+  @apply absolute left-0 top-3 text-gray-500 transition-all duration-300 pointer-events-none;
+}
+
+.floating-label-input input:focus ~ label,
+.floating-label-input input:not(:placeholder-shown) ~ label,
+.floating-label-input textarea:focus ~ label,
+.floating-label-input textarea:not(:placeholder-shown) ~ label,
+.floating-label-input select:focus ~ label,
+.floating-label-input select:not([value=""]) ~ label {
+  @apply -top-4 text-xs text-gold;
+}

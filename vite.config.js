@@ -6,9 +6,23 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          motion: ['framer-motion'],
+        manualChunks(id) {
+          // Check if the module is coming from node_modules
+          if (id.includes('node_modules')) {
+            // Group framer-motion into its own chunk
+            if (id.includes('framer-motion')) {
+              return 'motion';
+            }
+            
+            // Group React dependencies into the vendor chunk
+            if (
+              id.includes('react') || 
+              id.includes('react-dom') || 
+              id.includes('react-router-dom')
+            ) {
+              return 'vendor';
+            }
+          }
         }
       }
     },

@@ -73,45 +73,42 @@ const Home = () => {
     document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const heroHeadline = "Crafting Spaces. Defining Elegance.".split(" ");
+  const heroHeadline = "Steps & Riser Tiles".split(" ");
 
   return (
     <div className="w-full">
       {/* Section 1 — Hero */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden hero-gradient-overlay">
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-cyan-50 via-white to-cyan-100/50">
         <div className="absolute inset-0 floating-grid opacity-10"></div>
         <div className="container mx-auto px-6 relative z-10 text-center">
           <div className="flex flex-wrap justify-center mb-6">
             {heroHeadline.map((word, i) => (
-              <motion.span
+              <span
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.15, duration: 0.6 }}
-                className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mr-4 mb-2 drop-shadow-lg"
+                className="text-5xl md:text-7xl lg:text-8xl font-bold text-slate-800 mr-4 mb-2 tracking-tight drop-shadow-sm"
               >
                 {word}
-              </motion.span>
+              </span>
             ))}
           </div>
           <motion.p 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
-            className="text-lg md:text-2xl text-cream/90 max-w-2xl mx-auto mb-10 tracking-wide"
+            transition={{ delay: 0.1, duration: 0.5 }}
+            className="text-xl md:text-3xl text-slate-600 max-w-3xl mx-auto mb-10 tracking-wide font-light"
           >
-            Premium ceramic tiles, step risers, quartz sinks, and border tiles from Morbi, India.
+            India's Trusted Brand for Premium Step Riser Tiles
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2, duration: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            transition={{ delay: 0.2, duration: 0.4 }}
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
-            <button onClick={scrollToCategories} className="px-8 py-4 bg-gold hover:bg-bronze text-white font-bold rounded shadow-lg hover-lift tracking-wider uppercase text-sm">
+            <button onClick={scrollToCategories} className="px-8 py-4 bg-gradient-to-r from-[#0ed3d3] to-[#018e9c] hover:from-[#0ac5c5] hover:to-[#017782] text-white font-bold rounded shadow-lg shadow-teal-500/30 hover-lift tracking-wider uppercase text-sm transition-all duration-300">
               Explore Collection
             </button>
-            <button onClick={() => navigate('/find-dealer')} className="px-8 py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold rounded shadow-lg hover-lift tracking-wider uppercase text-sm backdrop-blur-sm">
+            <button onClick={() => navigate('/find-dealer')} className="px-8 py-4 bg-white hover:bg-gray-50 text-slate-700 font-bold rounded shadow-md hover:shadow-lg hover-lift tracking-wider uppercase text-sm transition-all duration-300">
               Find Nearest Dealer
             </button>
           </motion.div>

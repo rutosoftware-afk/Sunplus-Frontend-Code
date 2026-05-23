@@ -8,9 +8,9 @@ const About = () => {
 
   const milestones = [
     { year: "1998", title: "Foundation", desc: "Established in Morbi, Gujarat with a vision to revolutionize the ceramic industry." },
-    { year: "2012", title: "Expansion", desc: "Launched our first exclusive range of Golden & Silver border tiles." },
+    { year: "2012", title: "Expansion", desc: "Launched our first exclusive range of Steps & Riser tiles." },
     { year: "2016", title: "Global Reach", desc: "Started exporting to over 20 countries, establishing a global footprint." },
-    { year: "2020", title: "Innovation", desc: "Introduced premium Quartz Sinks and specialized Step Risers." },
+    { year: "2020", title: "Innovation", desc: "Introduced premium Quartz Sinks." },
     { year: "2023", title: "Milestone", desc: "Crossed 50+ export countries and 10,000+ satisfied customers worldwide." }
   ];
 

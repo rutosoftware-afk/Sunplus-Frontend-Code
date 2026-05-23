@@ -86,7 +86,7 @@ const Home = () => {
             <br />
             <span>Tiles</span>
           </h1>
-          <p className="text-xl md:text-3xl text-slate-900 max-w-3xl mx-auto mb-10 tracking-wide font-black" style={{ fontWeight: 900 }}>
+          <p className="text-xl md:text-3xl  max-w-3xl mx-auto mb-10 tracking-wide ">
             India's Trusted Brand for Premium Step Riser Tiles
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">

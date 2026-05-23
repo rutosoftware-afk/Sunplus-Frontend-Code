@@ -81,8 +81,8 @@ const Home = () => {
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-cyan-50 via-white to-cyan-100/50">
         <div className="absolute inset-0 floating-grid opacity-10"></div>
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-slate-800 mb-6 tracking-tight drop-shadow-sm">
-            <span>Steps & Riser</span>
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-slate-800 mb-6 tracking-tight drop-shadow-sm leading-tight">
+            <span className="whitespace-nowrap">Steps & Riser</span>
             <br />
             <span>Tiles</span>
           </h1>

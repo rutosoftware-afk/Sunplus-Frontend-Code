@@ -91,27 +91,17 @@ const Home = () => {
               </span>
             ))}
           </div>
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.1, duration: 0.5 }}
-            className="text-xl md:text-3xl text-slate-600 max-w-3xl mx-auto mb-10 tracking-wide font-light"
-          >
+          <p className="text-xl md:text-3xl text-slate-600 max-w-3xl mx-auto mb-10 tracking-wide font-light">
             India's Trusted Brand for Premium Step Riser Tiles
-          </motion.p>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.4 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-          >
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <button onClick={scrollToCategories} className="px-8 py-4 bg-gradient-to-r from-[#0ed3d3] to-[#018e9c] hover:from-[#0ac5c5] hover:to-[#017782] text-white font-bold rounded shadow-lg shadow-teal-500/30 hover-lift tracking-wider uppercase text-sm transition-all duration-300">
               Explore Collection
             </button>
             <button onClick={() => navigate('/find-dealer')} className="px-8 py-4 bg-white hover:bg-gray-50 text-slate-700 font-bold rounded shadow-md hover:shadow-lg hover-lift tracking-wider uppercase text-sm transition-all duration-300">
               Find Nearest Dealer
             </button>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -187,8 +177,8 @@ const Home = () => {
               <motion.div 
                 key={idx}
                 variants={{
-                  hidden: { opacity: 0, y: 30 },
-                  visible: { opacity: 1, y: 0 }
+                  hidden: { opacity: 0 },
+                  visible: { opacity: 1 }
                 }}
                 className="text-center"
               >
@@ -208,7 +198,7 @@ const Home = () => {
         <div className="absolute inset-0 opacity-5 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gold via-charcoal to-charcoal"></div>
         <div className="container mx-auto px-6 relative z-10 text-center">
           <h2 className="text-3xl font-bold mb-16">What Our Clients Say</h2>
-          <div className="max-w-3xl mx-auto h-40 flex items-center justify-center">
+          <div className="max-w-3xl mx-auto min-h-[160px] flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.div
                 key={testimonialIndex}

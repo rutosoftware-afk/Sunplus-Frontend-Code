@@ -20,8 +20,8 @@ const About = () => {
       <section className="pt-32 pb-20 bg-charcoal text-center px-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-transparent"></div>
         <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-6xl font-bold text-white relative z-10 mb-6"
         >
@@ -82,8 +82,8 @@ const About = () => {
               {milestones.map((item, idx) => (
                 <motion.div
                   key={idx}
-                  initial={{ opacity: 0, x: idx % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.6, delay: idx * 0.1 }}
                   className={`relative flex items-center ${idx % 2 === 0 ? 'md:flex-row-reverse' : ''}`}

@@ -27,6 +27,15 @@ export default defineConfig({
       }
     },
     minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+      },
+    },
     cssMinify: true,
+    cssCodeSplit: true,
+    reportCompressedSize: false,
   }
 })

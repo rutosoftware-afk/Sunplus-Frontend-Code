@@ -45,8 +45,8 @@ const Gallery = () => {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { duration: 0.5, ease: "easeOut" } }
   };
 
   // Helper to generate thumbnail URL from video URL
@@ -93,8 +93,8 @@ const Gallery = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
@@ -142,7 +142,9 @@ const Gallery = () => {
               <div className="w-full h-full relative">
                 <img 
                   src={media.type === 'video' ? getVideoThumbnail(media.link) : getOptimizedImageUrl(media.link, 500)} 
-                  alt="Gallery item"
+                  alt={media.type === 'video' ? 'Sunplus Cera product video thumbnail' : 'Sunplus Cera ceramic tile product'}
+                  width="500"
+                  height="500"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   loading="lazy"
                 />
@@ -225,7 +227,9 @@ const Gallery = () => {
               ) : (
                 <img 
                   src={getOptimizedImageUrl(selectedMedia.link, 1200)} 
-                  alt="Gallery fullsize" 
+                  alt="Sunplus Cera product full size view" 
+                  width="1200"
+                  height="1200"
                   className="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl"
                 />
               )}

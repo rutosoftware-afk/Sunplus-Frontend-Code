@@ -97,8 +97,8 @@ const Contact = () => {
 
         <div className="text-center mb-12">
           <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             className="text-4xl font-bold text-charcoal mb-4"
           >
             Get In Touch
@@ -218,8 +218,8 @@ const Contact = () => {
                 {dealers.map((dealer, idx) => (
                   <motion.div
                     key={idx}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     transition={{ delay: idx * 0.1 }}
                   >
                     <DealerCard dealer={dealer} />

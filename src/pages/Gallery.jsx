@@ -87,7 +87,7 @@ const Gallery = () => {
   };
 
   return (
-    <section className="bg-charcoal min-h-screen pt-12 pb-24 relative overflow-hidden">
+    <section className="bg-charcoal min-h-screen pt-24 pb-24 relative overflow-hidden">
       {/* Background styling elements */}
       <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-black/40 to-transparent z-0"></div>
       

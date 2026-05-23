@@ -11,6 +11,8 @@ const About = React.lazy(() => import('./pages/About'));
 const Contact = React.lazy(() => import('./pages/Contact'));
 const FindDealer = React.lazy(() => import('./pages/FindDealer'));
 const Gallery = React.lazy(() => import('./pages/Gallery'));
+const PrivacyPolicy = React.lazy(() => import('./pages/PrivacyPolicy'));
+
 
 const PageTransition = ({ children }) => {
   const location = useLocation();
@@ -22,7 +24,7 @@ const PageTransition = ({ children }) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3 }}
-        className="min-h-screen pt-20" // Offset for fixed navbar
+        className="min-h-screen" // Removed pt-20 offset for fixed navbar to let hero section touch top
       >
         {children}
       </motion.div>
@@ -44,6 +46,7 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/find-dealer" element={<FindDealer />} />
                 <Route path="/gallery" element={<Gallery />} />
+                <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               </Routes>
             </PageTransition>
           </Suspense>

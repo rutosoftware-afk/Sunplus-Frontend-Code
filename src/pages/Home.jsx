@@ -73,7 +73,7 @@ const Home = () => {
     document.getElementById('categories')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const heroHeadline = "Steps & Riser Tiles".split(" ");
+
 
   return (
     <div className="w-full">
@@ -81,17 +81,12 @@ const Home = () => {
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-cyan-50 via-white to-cyan-100/50">
         <div className="absolute inset-0 floating-grid opacity-10"></div>
         <div className="container mx-auto px-6 relative z-10 text-center">
-          <div className="flex flex-wrap justify-center mb-6">
-            {heroHeadline.map((word, i) => (
-              <span
-                key={i}
-                className="text-5xl md:text-7xl lg:text-8xl font-bold text-slate-800 mr-4 mb-2 tracking-tight drop-shadow-sm"
-              >
-                {word}
-              </span>
-            ))}
-          </div>
-          <p className="text-xl md:text-3xl text-slate-600 max-w-3xl mx-auto mb-10 tracking-wide font-light">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-slate-800 mb-6 tracking-tight drop-shadow-sm">
+            <span>Steps & Riser</span>
+            <br />
+            <span>Tiles</span>
+          </h1>
+          <p className="text-xl md:text-3xl text-slate-900 max-w-3xl mx-auto mb-10 tracking-wide font-black" style={{ fontWeight: 900 }}>
             India's Trusted Brand for Premium Step Riser Tiles
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
